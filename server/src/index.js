@@ -9,7 +9,9 @@ import app from './http-server.js';
 
 // Create a HTTP server
 const server = createServer(app);
-const io = new Server(server);
+const io = new Server(server, {
+    path: '/log/socket.io',
+});
 
 // Path to the log file
 io.on('connection', (socket) => {

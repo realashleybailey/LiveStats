@@ -27,7 +27,9 @@ const resize = new ResizeObserver(function (entries) {
 resize.observe(document.getElementById('terminal-container'));
 
 // Set up socket.io connection
-const socket = io();
+const socket = io({
+    path: '/log/socket.io',
+});
 
 // Set up socket.io events
 socket.on('connect', async () => {
