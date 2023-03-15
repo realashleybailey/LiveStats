@@ -9,6 +9,10 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
 const publicPath = path.resolve(__dirname, '..', 'dist');
 
-app.use(express.static(publicPath));
+app.get('/', (req, res) => {
+    res.redirect('/log');
+});
+
+app.use("/log", express.static(publicPath));
 
 export default app;
