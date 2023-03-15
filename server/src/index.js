@@ -44,6 +44,16 @@ io.on('connection', (socket) => {
 
     // Send data to the client
     tail.on('line', (data) => {
+
+        // Replace INF with INFO and green color
+        data = data.replace(/INF/g, '\x1b[32mINFO\x1b[0m');
+
+        // Replace WRN with WARN and yellow color
+        data = data.replace(/WRN/g, '\x1b[33mWARN\x1b[0m');
+
+        // Replace ERR with ERROR and red color
+        data = data.replace(/ERR/g, '\x1b[31mERROR\x1b[0m');
+
         socket.emit('data', data);
     });
 });

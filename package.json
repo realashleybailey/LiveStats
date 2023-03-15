@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "pull": "git pull origin main && cd ./web/ && npm i && npm run build && cd ../"
+    "pull": "git pull origin main && cd ./web/ && npm i && npm run build && cd ../",
+    "push": "git add . && git commit -m \"Update\" && git push origin main"
   },
   "repository": {
     "type": "git",
