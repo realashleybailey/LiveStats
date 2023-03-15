@@ -54,6 +54,9 @@ io.on('connection', (socket) => {
         // Replace ERR with ERROR and red color
         data = data.replace(/ERR/g, '\x1b[31mERROR\x1b[0m');
 
+        // Remove  +00:00 from string
+        data = data.replace(/ \+00:00/g, '');
+
         socket.emit('data', data);
     });
 });
