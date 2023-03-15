@@ -1,0 +1,21 @@
+{
+  "name": "livestats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "pull": "git pull origin main && cd ./web/ && npm i && npm run build && cd ../"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/realashleybailey/LiveStats.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/realashleybailey/LiveStats/issues"
+  },
+  "homepage": "https://github.com/realashleybailey/LiveStats#readme"
+}
